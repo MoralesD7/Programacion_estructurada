@@ -1,16 +1,28 @@
 package P_estructurada_leetcode;
-/*Dada una cadena s, encuentre la longitud del valor más largo
-subcadena
-sin repetir caracteres.
 
-basicamente vamos a obtener el valor primer de la cadena
-despues de obtener el primer valor de la primer posicion
-vamos air comparando con los siguientes valores de la cadena si son diferentes seguira acumulandose en una cadena aux
-si no son iguales se detendra hasta el valor donde se encontro el primer valor y esa sera la subcadena mas larga y se usara
-el metodo lenght para calcular el valor de la cadena y sha
-*/
+import java.util.Scanner;
+
+//Realizar una función, a la que se le pase como parámetro un número N, y muestre por pantalla N
+//veces, el mensaje: “Módulo ejecutándose”
+//tengo dos opciones o creo un metodo static o creo una instancia para invocar el metodo
 public class E_2 {
-    public static void main(String[] args) {
+    public static void N_repeticiones(int num){
+        int longitud = num;
+        for(int i = 0 ; i < longitud ;i++){
+            System.out.println("Modulo ejectuandose");
+        }
 
+    }
+    public static void main(String[] args) {
+        // objeto Scanner
+        Scanner sc = new Scanner(System.in);
+
+        //creacion de variable de n cantidad
+        int n_veces;
+        //Solicitar la cantidad de veces que quieres que se repita
+        System.out.println("Digita la cantidad de veces que quieres que se ejecute el metodo:");
+        n_veces  =  sc.nextInt();
+        N_repeticiones(n_veces);
+        sc.close();
     }
 }
